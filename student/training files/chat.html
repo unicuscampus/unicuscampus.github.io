@@ -1,0 +1,227 @@
+<html><head>
+    <title>My Biz</title>
+</head>
+<style type="text/css">
+    
+.ochukotalk, .italk {
+    position: relative;
+    border-radius: 8px;
+    max-width: 90%;
+    text-align: left;
+}
+
+.ochukotalk{
+    float: left;
+    margin-left: 10px;
+}
+
+.italk{
+    float: right;
+    margin-right:10px;
+}
+
+
+.ochukotalk:after, .ochukotalk:before {
+    right: 100%;
+    top: 6px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.ochukotalk:after {
+    border-color: transparent;
+    border-right-color: skyblue;
+    border-width: 10px;
+    margin-top: 0px;
+}
+.ochukotalk:before {
+    margin-top: -5px;
+}
+
+
+.italk:after,
+.italk:before {
+    left: 100%;
+    top: 6px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.italk:after {
+    border-color: transparent;
+    border-left-color: royalblue;
+    border-width: 10px;
+    margin-top: 0px;
+}
+.italk:before {
+    margin-top: -5px;
+}
+
+</style>
+<body style="
+    margin: 0;
+">
+
+    <section id="one" style="
+                height: 100vh;
+                transition: 4s;
+                background-size: cover;
+                background-position: center;
+                ">
+    <div style="
+    background-color: white;
+    text-align: right;
+    font-size: 14px;
+    height: 60px;
+"><img src="logo.png" style="
+    float: left;
+    height: 100%;
+">
+        
+<a style="
+    background-color: snow;
+    border: none;
+    font-size: 16px;
+          "><button style="
+    background-color: snow;
+    border: none;
+    height: 60px;
+    padding: 20px;
+    font-size: 16px;
+">About</button></a>
+<a style="
+    background-color: snow;
+    border: none;
+    font-size: 16px;
+          "><button style="
+    background-color: snow;
+    border: none;
+    height: 60px;
+    padding: 20px;
+    font-size: 16px;
+"><img src="chat.png" style="
+    height: 11px;
+">Chat</button></a>
+<a style="
+    background-color: snow;
+    border: none;
+    font-size: 16px;
+          "><button style="
+    background-color: snow;
+    border: none;
+    height: 60px;
+    padding: 20px;
+    font-size: 16px;
+">Contact</button></a>
+
+    </div>
+
+
+
+
+<p style="
+    text-align: center;
+    font-size: 47px;
+    font-weight: bold;
+    font-family: cursive;
+    color: white;
+    ">
+<img id="ochuko" src="normal.jpg" style="
+    height: 200px;
+">
+</p>
+
+<div style="
+    text-align: center;
+    font-weight: bold;
+    font-family: cursive;
+    margin:0;
+    ">
+<div style="
+    width: 60%;
+    display:inline-block;
+    height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;">
+
+<div style="
+    width: 100%;
+    display:block; 
+    height: 60px;">    
+
+<span class="ochukotalk" style="
+    padding: 10px;
+    background-color: skyblue;
+    color: black;
+">Hello, Please what's your name?</span>
+
+</div>
+
+<div style="
+    width: 100%;
+    display:block; 
+    height: 60px;"> 
+
+<span class="italk" style="
+    padding: 10px;
+    background-color: royalblue;
+    color: white;
+">my name is oke</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<p style="
+    text-align: center;
+"><input id="name" type="text" style="
+    width: 60%;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;">
+</p>
+<br>
+
+
+
+
+    
+    
+    </section>
+
+
+
+
+
+
+
+
+<script>
+    
+image = 0;
+
+window.onload = function (){
+
+
+}
+
+</script>
+
+
+
+
+
+</body>
+
+
+</html>

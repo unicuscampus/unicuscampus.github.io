@@ -6,7 +6,7 @@
     margin: 0;
 ">
 
-    <section style="
+    <section id="one" style="
                 height: 100vh;
                 background-image: url(background2.jpg);
                 transition: 4s;
@@ -34,7 +34,7 @@
     padding: 20px;
     font-size: 16px;
 ">About</button></a>
-<a style="
+<a href="chat.html" style="
     background-color: snow;
     border: none;
     font-size: 16px;
@@ -104,13 +104,15 @@
     width: 150px;
     border-radius: 30px;
     margin: 5px;
-"><img src="chat.png" style="
+"><a  href="chat.html" ><img src="chat.png" style="
     height: 11px;
-"> Chat</button>
+"> Chat</a></button>
 </p>
     
     
     </section>
+
+
 <section style="
                 height: 100vh;
                 transition: 4s;
@@ -123,7 +125,7 @@
 
 
 
-<span style="
+<div style="
     padding: 1%;
     width: 46%;
     text-align: justify;
@@ -148,7 +150,7 @@ Are you interterested in learning click the button bellow to chat with our AI to
     border: none;
     padding: 10px;
     float: right;
-">Learn More</button></span><span style="
+">Learn More</button></div><div style="
     padding: 1%;
     width: 46%;
     text-align: justify;
@@ -173,22 +175,114 @@ Are you interterested in learning click the button bellow to chat with our AI to
     border: none;
     padding: 10px;
     float: right;
-">Learn More</button></span><p style="
-    text-align: center;
-    font-size: 47px;
-    font-weight: bold;
-    font-family: cursive;
+">Learn More</button></div>
+    
+    
+    </section>
+
+
+
+<section style="
+    height: 100vh;
+    transition: 4s;
+    background-size: cover;
+    padding: 20px;
+    background-color: darkblue;
+">
+    
+
+
+
+
+
+<div style="
+    padding: 1%;
+    width: 46%;
+    text-align: justify;
+    border: 1px solid;
+    display: inline-block;
+    margin: .5%;
+    background-color: white;
+    "><img src="user.jpg" style="
+    width: 100%;
+">
+<span style="
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.7);
+">This is a test website created by unicus campus student of the one day workshop. 
+<br><br>
+Are you interterested in learning click the button bellow to chat with our AI to find out more</span>
+
+<a style="
+    background-color: darkblue;
     color: white;
-    "><span style="
+    border: none;
     padding: 10px;
-">LEARN TECH SKILLS WITH US</span></p>
+    float: right;
+" href="tel:07030188093">Call Me</a></div><div style="
+    padding: 1%;
+    width: 46%;
+    text-align: justify;
+    border: 1px solid;
+    display: inline-block;
+    margin: .5%;
+    background-color: white;
+    "><img src="normal.jpg" style="max-height: 200px;">
+<span style="
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 40px;
+">OR CHAT WITH MY AI
+</span>
+
+<a href="chat.html" style="
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 10px;
+    float: right;
+">Chat</a></div>
+
     
     
     </section>
 
-    <section>
-        
-    </section>
 
 
-</body></html>
+
+
+
+<script>
+    
+image = 0;
+
+window.onload = function (){
+
+setInterval(function(){
+    image=image+1;
+    var top;
+    top=document.querySelector('#one');
+    if (image==1){
+        top.style.backgroundImage=('url(background1.jpg)');
+    }else if (image==2){
+        top.style.backgroundImage=('url(background2.jpg)');
+    }else if (image==3){
+        top.style.backgroundImage=('url(background3.jpg)');  
+        image=0;      
+    }
+    
+},10000)
+
+}
+
+</script>
+
+
+</body>
+
+
+</html>
