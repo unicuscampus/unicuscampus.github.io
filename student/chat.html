@@ -161,7 +161,7 @@
     overflow: scroll;
     overflow-x: hidden;">
 
-<div class="italkbox" style=" width: 100%;display:block; min-height: 60px;text-align: right;"> <span class="italk" style="padding: 10px;background-color: royalblue;color: white;">my name is oke</span></div>
+<!-- <div class="italkbox" style=" width: 100%;display:block; min-height: 60px;text-align: right;"> <span class="italk" style="padding: 10px;background-color: royalblue;color: white;">my name is oke</span></div> -->
 
 
 <div style=" width: 100%; display:block;  min-height: 60px; text-align: left;"> <span class="ochukotalk" style="padding: 10px;background-color: skyblue;color: black;">Hello, My name is Ochuko<br>I am A Business AI,<br> Please what's your name?</span></div>
@@ -204,6 +204,85 @@
 
 
 </body>
+
+<script>
+
+ name="";
+ count=0; 
+
+function answer(){
+ reply = "Sorry, I am not that smart yet";
+ emotion ="sad";
+
+ italk=document.querySelector("#name").value;
+
+
+ if (name==""){
+
+    name=document.querySelector("#name").value;
+
+    if (name=="" ){
+        count=count+1;
+        if (count==1){
+            emotion="sad";
+            reply="Sorry you didn't tell me your name";
+        }else if (count>=2){
+            emotion="cry";
+            reply="Please, I beg, tell me your name let's start Business";
+        }
+
+    }else{
+        count=0;
+        name=name.toLowerCase().replace("i ","").replace("is ","").replace("name ","").replace("am ","").replace("my ","").trim();
+
+        if(name=="ochuko"){
+        reply="Heyyy "+name+" You are my name sake, it's lovely to meet you. <br>Now which of these services do you want?<br><br>Training<br>InternShip<br>OR Private Classes"; 
+        emotion="smile"; 
+        }else{
+
+        reply="Hello "+name+" it's nice to meet you. <br>Now which of these services do you want?<br><br>Training<br>InternShip<br>OR Private Classes"; 
+        emotion="normal"; 
+        }
+
+    }
+
+ }else{
+
+        ans=document.querySelector("#name").value;
+        if (count=0){
+            ans=ans.toLowerCase().replace("i ","").replace("want ","").replace("choose ","").replace("how ","").replace("much ","").replace("need ","").trim();
+                reply="Thank You that all for now. students will keep updating me as time goes on";
+                emotion="normal";
+        }
+
+
+
+ }
+
+prevoius=document.querySelector("#chatbox").innerHTML;
+if(italk!="") italk='<div class="italkbox" style=" width: 100%;display:block; min-height: 60px;text-align: right;"> <span class="italk" style="padding: 10px;background-color: royalblue;color: white;">'+italk+'</span></div>';
+prevoius=italk+prevoius;
+document.querySelector("#chatbox").innerHTML=prevoius;
+
+
+setTimeout(function(){
+ prevoius=document.querySelector("#chatbox").innerHTML;
+if(reply!="") reply='<div style=" width: 100%; display:block;  min-height: 60px; text-align: left;"> <span class="ochukotalk" style="padding: 10px;background-color: skyblue;color: black;">'+reply+'</span></div>';
+prevoius=reply+prevoius;
+document.querySelector("#chatbox").innerHTML=prevoius;   
+document.querySelector("#ochuko").src=emotion+".jpg";
+},1000)
+
+
+document.querySelector("#name").value="";
+
+}    
+
+
+
+
+
+</script>
 
 
 </html>
